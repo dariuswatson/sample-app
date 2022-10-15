@@ -1,1 +1,2 @@
-# sample-app
+# Sample application watson-app
+# helm deployment 
