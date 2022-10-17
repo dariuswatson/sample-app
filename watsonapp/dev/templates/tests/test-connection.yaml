@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "watsonapp.fullname" . }}-test-connection"
+  labels:
+    {{- include "watsonapp.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "watsonapp.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never
