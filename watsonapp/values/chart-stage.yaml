@@ -1,5 +1,5 @@
 apiVersion: v2
-name: watsonapp
+name: watsonappstage
 description: A Helm chart for sample application
 
 # A chart can be either an 'application' or a 'library' chart.
